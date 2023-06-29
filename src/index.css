@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.demo-logo-vertical img {
+  width: 85%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 20px;
+}
