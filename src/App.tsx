@@ -9,6 +9,7 @@ import {
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme, Typography } from "antd";
 import { Button } from "./stories/Button";
+import { Input } from "./stories/Input";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -45,13 +46,13 @@ const items: MenuItem[] = [
 
 const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [value, setValue] = useState("value");
   const {
     token: { colorBgContainer },
   } = theme.useToken();
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Button label="Button" onClick={() => {}} primary size="large" />
       <Sider
         collapsible
         collapsed={collapsed}
@@ -90,7 +91,23 @@ const App: React.FC = () => {
               background: colorBgContainer,
             }}
           >
-            Bill is a cat.
+            <Button
+              label="Button"
+              variant="primary"
+              size="medium"
+              onClick={() => {}}
+            />
+
+            <Input
+              label="Input"
+              fullWidth={false}
+              placeholder="Input"
+              value={value}
+              iconSrc="src\assets\attachment.svg"
+              onChange={(value) => {
+                setValue(value);
+              }}
+            />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
