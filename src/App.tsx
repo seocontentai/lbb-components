@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme, Typography } from "antd";
+import { Button } from "./stories/Button";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -50,21 +51,18 @@ const App: React.FC = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
+      <Button label="Button" onClick={() => {}} primary size="large" />
       <Sider
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
         theme="light"
+        collapsedWidth={60}
       >
         <div className="demo-logo-vertical">
           <img src="/src/assets/wlr.png" />
         </div>
-        <Menu
-          theme="light"
-          defaultSelectedKeys={["1"]}
-          mode="inline"
-          items={items}
-        />
+        <Menu defaultSelectedKeys={["1"]} mode="inline" items={items} />
       </Sider>
       <Layout>
         <Header style={{ padding: 0, background: colorBgContainer }}>

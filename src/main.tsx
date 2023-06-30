@@ -7,10 +7,10 @@ import { ConfigProvider } from "antd";
 const config: ThemeConfig = {
   token: {
     colorPrimary: "#2879C7",
-    colorBgElevated: "#ff0000",
+    colorBgElevated: "#FFFFFF",
     colorBgBase: "#F7F7F8",
     colorBgContainer: "#FFFFFF",
-    colorPrimaryBg: "#FFFFFF",
+    colorBorder: "#D9D9D9",
   },
 };
 
