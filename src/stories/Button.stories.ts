@@ -17,20 +17,29 @@ export const Primary: Story = {
   args: {
     variant: "primary",
     label: "Button",
-    fullWidth: false,
   },
 };
 export const Secondary: Story = {
   args: {
     label: "Button",
-    fullWidth: false,
+  },
+};
+export const AfterIconButton: Story = {
+  args: {
+    label: "Button",
+    afterIcon: "src/assets/react.svg",
+  },
+};
+export const BeforeIconButton: Story = {
+  args: {
+    label: "Button",
+    beforeIcon: "src/assets/react.svg",
   },
 };
 export const Small: Story = {
   args: {
     size: "small",
     label: "Button",
-    fullWidth: false,
   },
 };
 
@@ -38,7 +47,6 @@ export const Large: Story = {
   args: {
     size: "large",
     label: "Button",
-    fullWidth: false,
   },
 };
 export const fullWidth: Story = {

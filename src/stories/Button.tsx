@@ -16,6 +16,16 @@ interface ButtonProps {
   label: string;
 
   /**
+   * SVG Icon Path
+   */
+  beforeIcon?: string;
+
+  /**
+   * Svg Icon Path
+   */
+  afterIcon?: string;
+
+  /**
    * size of the button
    */
   fullWidth?: boolean;
@@ -39,7 +49,8 @@ export const Button = ({
   label,
   fullWidth = false,
   variant,
-
+  afterIcon = "",
+  beforeIcon = "",
   ...props
 }: ButtonProps) => {
   const mode =
@@ -63,7 +74,13 @@ export const Button = ({
       style={{ width: fullWidth ? "100%" : "auto" }}
       {...props}
     >
+      {beforeIcon && (
+        <img className="storybook-button-beforeIcon" src={beforeIcon} />
+      )}
       {label}
+      {afterIcon && (
+        <img className="storybook-button-afterIcon" src={afterIcon} />
+      )}
     </button>
   );
 };

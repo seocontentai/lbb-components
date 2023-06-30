@@ -17,7 +17,7 @@ interface InputProps {
   /**
    * Input Felid Placeholder
    */
-  fullWidth: boolean;
+  fullWidth?: boolean;
 
   /**
    * Input Felid Value
@@ -27,7 +27,7 @@ interface InputProps {
   /**
    * Input Felid On change handler
    */
-  iconSrc: string;
+  iconSrc?: string;
 
   /**
    * Input Felid On change handler

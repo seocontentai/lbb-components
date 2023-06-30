@@ -95,6 +95,8 @@ const App: React.FC = () => {
               label="Button"
               variant="primary"
               size="medium"
+              beforeIcon="src\assets\attachment.svg"
+              afterIcon=""
               onClick={() => {}}
             />
 
